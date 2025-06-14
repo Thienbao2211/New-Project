@@ -1,54 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - MINDX Cinema</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <div class="register">
-        <div class="register-form">
-            <div>
-                <h1 class="register-title">Register</h1>
-            </div>
-
-            <form action="submit">
-                <div>
-                    <input type="text" placeholder="Username" style="margin-bottom: 15px; padding: 15px; font-size: 25px; border-radius: 15px; color: grey; border: 2px solid grey;">
-                </div>
-
-                <div>
-                    <input type="text" placeholder="Email" style="margin-bottom: 15px; padding: 15px; font-size: 25px; border-radius: 15px; color: grey; border: 2px solid grey;">
-                </div>
-
-                <div>
-                    <input type="password" placeholder="Password" style="margin-bottom: 15px; padding: 15px; font-size: 25px; border-radius: 15px; color: grey; border: 2px solid grey;">
-                </div>
-
-                <div>
-                    <input type="password" placeholder="Confirm Password" style="margin-bottom: 15px; padding: 15px; font-size: 25px; border-radius: 15px; color: grey; border: 2px solid grey;">
-                </div>
-
-                <div class="account-sub-title">
-                    <p style="margin: 5px;">Already Have An Account?</p>
-                    <button href="./signIn.html">Sign In</button>
-                </div>
-
-                <div>
-                    <input type="submit" value="Submit" style="padding: 12px; width: 350px; font-size: 20px; border-radius: 12px; background-color: red; color: white; border: none;">
-                </div>
-
-            </form>
-        </div>
-        
-
+      <div class="register-form">
         <div>
-            <img src="./image/image1.png" alt="Image Register" width="500px">
+          <h1 class="register-title">Register</h1>
         </div>
-    
+
+        <form>
+          <div>
+            <input
+              id="usernameInput"
+              type="text"
+              placeholder="Username"
+              style="
+                margin-bottom: 15px;
+                padding: 15px;
+                font-size: 25px;
+                border-radius: 15px;
+                color: grey;
+                border: 2px solid grey;
+              "
+            />
+          </div>
+
+          <div>
+            <input
+              id="emailInput"
+              type="text"
+              placeholder="Email"
+              style="
+                margin-bottom: 15px;
+                padding: 15px;
+                font-size: 25px;
+                border-radius: 15px;
+                color: grey;
+                border: 2px solid grey;
+              "
+            />
+          </div>
+
+          <div>
+            <input
+              id="passwordInput"
+              type="password"
+              placeholder="Password"
+              style="
+                margin-bottom: 15px;
+                padding: 15px;
+                font-size: 25px;
+                border-radius: 15px;
+                color: grey;
+                border: 2px solid grey;
+              "
+            />
+          </div>
+
+          <div>
+            <input
+              id="confirmPasswordInput"
+              type="password"
+              placeholder="Confirm Password"
+              style="
+                margin-bottom: 15px;
+                padding: 15px;
+                font-size: 25px;
+                border-radius: 15px;
+                color: grey;
+                border: 2px solid grey;
+              "
+            />
+          </div>
+
+          <div class="account-sub-title">
+            <p style="margin: 5px">Already Have An Account?</p>
+            <button href="./signIn.html">Sign In</button>
+          </div>
+
+          <div>
+            <input
+              type="submit"
+              value="Submit"
+              style="
+                padding: 12px;
+                width: 350px;
+                font-size: 20px;
+                border-radius: 12px;
+                background-color: red;
+                color: white;
+                border: none;
+              "
+            />
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <img src="./image/image1.png" alt="Image Register" width="500px" />
+      </div>
     </div>
 
-
-</body>
+    <script src="./script/register.js"></script>
+  </body>
 </html>
