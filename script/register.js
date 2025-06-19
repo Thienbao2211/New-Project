@@ -8,6 +8,7 @@ form.onsubmit = function (event) {
   event.preventDefault();
   let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   let usernameRegex = /^(?=.*[A-Z])(?=.*[a-z]).{5,}$/;
+  let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).+$/;
 
   if (
     !usernameInput.value ||
@@ -25,7 +26,16 @@ form.onsubmit = function (event) {
   }
 
   if (!emailRegex.test(emailInput.value)) {
-    alert("Vui Lòng Nhập Đúng Định Dạng Email!");
+    alert("Vui Lòng Nhập Tên Đúng Định Dạng Email!");
+    return;
+  }
+
+  if (!passwordRegex.test(passwordInput.value)) {
+    alert('Vui Lòng Nhập Mật Khẩu Gồm Số, Kí Tự Đặc Biệt Và Có Chữ In Hoa Và Thường!')
+  }
+
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    alert("Hai Mật Khẩu Không Giống Nhau!");
     return;
   }
 
@@ -44,6 +54,6 @@ form.onsubmit = function (event) {
   //  Đẩy Dữ Liệu Mới Vào Local Storage
   localStorage.setItem("accounts", JSON.stringify(accounts));
   alert("Đăng Ký Thành Công!");
-  //   Di Chuyển Tới Trang Main
+  //  Di Chuyển Tới Trang Main
   window.location.href = "./signIn.html";
 };
