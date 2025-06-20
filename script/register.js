@@ -7,8 +7,8 @@ let form = document.querySelector("form");
 form.onsubmit = function (event) {
   event.preventDefault();
   let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  let usernameRegex = /^(?=.*[A-Z])(?=.*[a-z]).{5,}$/;
-  let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).+$/;
+  let usernameRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])[A-Za-z\d[^A-Za-z0-9]]{6,18}$/;
+  let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,20}$/;
 
   if (
     !usernameInput.value ||
