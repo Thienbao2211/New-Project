@@ -1,13 +1,117 @@
+/* Universal */
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-image: url("../image/background-space-cadet.png");
+/* Head
+
+    Image, Nav (Title, Button)
+
+*/
+
+    /* Image */
+
+#bg-image {
+    filter: brightness(70%);
+    width: 100%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(50%);
+    position: relative;
+    object-fit: cover;
+}
+
+    /* Nav */
+
+.nav {
+    display: flex;
+    z-index: 2;
+}
+
+        /* Title */
+
+.title {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.title p {
+    font-size: 30px;
+    color: white;
+}
+
+        /* Btn */
+
+.searchExitBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+}
+
+.searchExitBtn i {
+    display: flex;
+    color: white;
+    font-size: 30px;
+}
+
+.searchExitBtn div {
+    margin-left: 25px;
+}
+
+/* Body 
+
+    Image Label, Text Label, Button
+
+*/
+
+/* Image Label */
+
+.image-label {
+    position: absolute;
+    top: 30%;
+    right: 25%;
+}
+
+.image-label img {
+    border-radius: 12px;
+    width: 275px;
+}
+
+/* Text Label */
+
+.label {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+}
+
+.text-label h1,p {
+    color: white;
+}
+
+.text-label p {
+    width: 465px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+/* Button Label */
+
+.button-label {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.button-label button {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    padding: 15px 25px 15px 25px;
+    border-radius: 10px;
+    border: none;
 }
