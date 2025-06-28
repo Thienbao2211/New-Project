@@ -74,7 +74,7 @@
 .image-label {
     position: absolute;
     top: 30%;
-    left: 10%;
+    right: 25%;
 }
 
 .image-label img {
@@ -87,7 +87,7 @@
 .label {
     position: absolute;
     top: 45%;
-    left: 30%;
+    left: 20%;
 }
 
 .text-label h1,p {
