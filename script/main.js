@@ -11,31 +11,32 @@
 // let labelCardTrending = document.querySelector("#label-card-trending");
 // let labelCardPopular = document.querySelector("#label-card-popular");
 
-let imgCardPopular = document.querySelectorAll('#img-card-popular');
-let labelCardPopular = document.querySelectorAll('#label-card-popular');
+let imgCardPopular = document.querySelectorAll("#img-card-popular");
+let labelCardPopular = document.querySelectorAll("#label-card-popular");
 
 let movieList = document.querySelector(".card-list");
 
 // Display The API
 
 async function movie() {
-    const request = await ('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1');
-    const movies = await request.json();
-
-    makeMoviesCard(movies);
+  const request =
+    await "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
+  const movies = await request.json();
+  console.log(movies);
+  makeMoviesCard(movies);
 }
 
 // Function Make Movie Card
 
 function makeMoviesCard(movies) {
-    for (let movie of movies) {
-        let imageMovieSrc = movie.show.image.medium;
-        let labelMovieText = movie.show.text.medium;
+  for (let movie of movies) {
+    let imageMovieSrc = movie.show.image.medium;
+    let labelMovieText = movie.show.text.medium;
 
-        imgCardPopular.src = imageMovieSrc;
-        labelCardPopular.text = labelMovieText;
+    imgCardPopular.src = imageMovieSrc;
+    labelCardPopular.text = labelMovieText;
 
-        // movieList.appendChild(imageMovieCard);
-        // movieList.appendChild(labelMovieCard);
-    }
+    // movieList.appendChild(imageMovieCard);
+    // movieList.appendChild(labelMovieCard);
+  }
 }
