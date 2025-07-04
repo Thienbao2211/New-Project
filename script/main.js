@@ -44,6 +44,14 @@ fetch(apiKeyTopRated)
       movieListTopRated.style.gap = "20px";
       movieListTopRated.style.marginBottom = "20px";
 
+      // Get API ID
+
+      cardMovieTopRated.addEventListener("click", () => {
+        let apiMovieId = data.results[i].id;
+        localStorage.setItem("Id", apiMovieId);
+        console.log(apiMovieId);
+      })
+
     }
   });
 
