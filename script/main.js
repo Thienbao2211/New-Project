@@ -50,6 +50,8 @@ fetch(apiKeyTopRated)
         let apiMovieId = data.results[i].id;
         localStorage.setItem("Id", apiMovieId);
         console.log(apiMovieId);
+
+        window.location.href = "../movie-overview.html"
       })
 
     }
@@ -85,6 +87,16 @@ fetch(apiKeyPopular)
 
       movieListPopular.style.display = "flex";
       movieListPopular.style.gap = "20px";
+
+      // Get API ID
+
+      cardMoviePopular.addEventListener("click", () => {
+        let apiMovieId = data.results[i].id;
+        localStorage.setItem("Id", apiMovieId);
+        console.log(apiMovieId);
+
+        window.location.href = "../movie-overview.html"
+      })
     }
   });
 
