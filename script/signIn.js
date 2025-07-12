@@ -19,8 +19,6 @@ form.onsubmit = function(event) {
     
     let accountsStr = localStorage.getItem("accounts");
     let accounts = JSON.parse(accountsStr);
-    // let username = accounts[0].username;
-    // let password = accounts[2].password;
 
         // Thêm Biến isLoginSuccess để kiểm tra có đăng nhập thành công không
     let isLoginSuccess = false;
