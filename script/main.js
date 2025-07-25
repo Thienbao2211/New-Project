@@ -34,6 +34,7 @@ fetch(apiKeyPopular)
 
       labelMoviePopular.style.color = "white";
       imgMoviePopular.style.borderRadius = "15px";
+      
       imgMoviePopular.addEventListener("mouseover", () => {
         imgMoviePopular.style.zoom = "110%";
       });
